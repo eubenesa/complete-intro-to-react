@@ -1,8 +1,10 @@
 {
   "scripts": {
     "api": "node ratingsAPI.js",
+    "build": "webpack",
     "format": "prettier --write --parser=flow \"src/**/*.{js,jsx}\"",
-    "lint": "eslint **/*.{js,jsx} --quiet"
+    "lint": "eslint **/*.{js,jsx} --quiet",
+    "watch": "webpack --watch"
   },
   "dependencies": {
     "axios": "0.16.1",

@@ -10,7 +10,7 @@ const MyFirstComponent = () =>
   ce('div', { id: 'my-first-component' }, [
     ce(MyTitle, { title: 'Game of Thrones', color: 'YellowGreen' }),
     ce(MyTitle, { title: 'Stranger Things', color: 'GreenYellow' }),
-    ce(MyTitle, { title: 'Silicon Valley', color: 'LimeGreen' }),
+    ce(MyTitle, { title: 'House of Cards', color: 'LimeGreen' }),
     ce(MyTitle, { title: 'Unbreakable Kimmy Schmidt', color: 'peru' })
   ]);
 
