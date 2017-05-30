@@ -4,37 +4,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>svideo</title>
-  <link rel="stylesheet" href="public/style.css">
 </head>
 <body>
   <div id="app"></div>
   <script src="node_modules/react/dist/react.min.js"></script>
   <script src="node_modules/react-dom/dist/react-dom.min.js"></script>
-  <script>
-    const ce = React.createElement;
-
-    const MyTitle = (props) => {
-      return (
-        ce('div', null,
-          ce('h1', { style: { color: props.color } }, props.title)
-        )
-      );
-    };
-
-    const MyFirstComponent = () => {
-      return ce('div', { id: 'my-first-component' },
-        [
-          ce(MyTitle, { title: 'Game of Thrones', color: 'YellowGreen' }),
-          ce(MyTitle, { title: 'Stranger Things', color: 'GreenYellow' }),
-          ce(MyTitle, { title: 'Silicon Valley', color: 'LimeGreen' }),
-          ce(MyTitle, { title: 'Unbreakable Kimmy Schmidt', color: 'peru' })
-        ]
-      );
-    };
-
-    ReactDOM.render(
-      ce(MyFirstComponent), document.getElementById('app')
-    );
-  </script>
+  <script src="src/ClientApp.jsx"></script>
 </body>
 </html>
