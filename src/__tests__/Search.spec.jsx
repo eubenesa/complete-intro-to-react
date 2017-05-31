@@ -8,7 +8,7 @@ import Search from '../Search';
 import ShowCard from '../ShowCard';
 
 describe('Search', () => {
-  const component = shallow(<Search />);
+  const component = shallow(<Search shows={preload.shows} />);
 
   it('renders correctly', () => {
     expect(component).toMatchSnapshot();
