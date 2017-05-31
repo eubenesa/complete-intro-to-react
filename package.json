@@ -5,6 +5,8 @@
     "dev": "webpack-dev-server",
     "format": "prettier --write --parser=flow \"src/**/*.{js,jsx}\"",
     "lint": "eslint **/*.{js,jsx} --quiet",
+    "test": "jest",
+    "test:update": "jest -u",
     "watch": "webpack --watch"
   },
   "dependencies": {
