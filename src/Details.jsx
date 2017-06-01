@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { getApiDetails } from './actionCreators';
+import getApiDetails from './asyncActions';
 
 import Header from './Header';
 import Spinner from './Spinner';
