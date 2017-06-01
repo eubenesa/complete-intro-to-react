@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import type { RouterHistory } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import { setSearchTerm } from './actionCreaters';
+import { setSearchTerm } from './actionCreators';
 
 // @connect(mapStateToProps) // Decorators (Stage 2)
 class Landing extends Component {

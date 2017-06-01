@@ -4,7 +4,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import { setSearchTerm } from './actionCreaters';
+import { setSearchTerm } from './actionCreators';
 
 const Header = (props: {
   showSearch?: boolean,

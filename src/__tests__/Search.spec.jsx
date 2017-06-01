@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 
 import { shallow, render } from 'enzyme';
 
-import { setSearchTerm } from '../actionCreaters';
+import { setSearchTerm } from '../actionCreators';
 import store from '../store';
 
 import preload from '../../data.json';

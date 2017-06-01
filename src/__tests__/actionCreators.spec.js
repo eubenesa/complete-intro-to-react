@@ -1,7 +1,7 @@
 // @flow
 
 import moxios from 'moxios';
-import { setSearchTerm, addApiData, getApiDetails } from '../actionCreaters';
+import { setSearchTerm, addApiData, getApiDetails } from '../actionCreators';
 
 describe('actionCreators', () => {
   it('setSearchTerm', () => {
