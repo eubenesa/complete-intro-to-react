@@ -4,11 +4,13 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import preload from '../../data.json';
 
-import Search from '../Search';
+import { UnwrappedSearch } from '../Search';
 import ShowCard from '../ShowCard';
 
 describe('Search', () => {
-  const component = shallow(<Search shows={preload.shows} />);
+  let component = shallow(
+    <UnwrappedSearch shows={preload.shows} searchTerm={''} />
+  );
 
   it('renders correctly', () => {
     expect(component).toMatchSnapshot();
@@ -20,11 +22,11 @@ describe('Search', () => {
 
   it('should render correct amount of shows based on search term', () => {
     const searchTerm = 'black';
+    component = shallow(
+      <UnwrappedSearch shows={preload.shows} searchTerm={searchTerm} />
+    );
     const showCount = 2;
 
-    component
-      .find('input')
-      .simulate('change', { target: { value: searchTerm } });
     expect(component.find(ShowCard).length).toEqual(showCount);
   });
 });
