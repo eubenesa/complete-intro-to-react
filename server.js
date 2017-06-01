@@ -6,7 +6,11 @@ const ReactDOMServer = require('react-dom/server');
 const ReactRouter = require('react-router-dom');
 const _ = require('lodash');
 const fs = require('fs');
+const webpackDevMiddleware = require('webpack-dev-middleware');
+const webpackHotMiddleware = require('webpack-hot-middleware');
+const webpack = require('webpack');
 const App = require('./src/App').default;
+const config = require('./webpack.config');
 
 const StaticRouter = ReactRouter.StaticRouter;
 const port = 8080;
@@ -15,10 +19,18 @@ const template = _.template(baseTemplate);
 
 const server = express();
 
+const compiler = webpack(config);
+server.use(
+  webpackDevMiddleware(compiler, {
+    publicPath: config.output.publicPath
+  })
+);
+server.use(webpackHotMiddleware(compiler));
+
 server.use('/public', express.static('./public'));
 
 server.use((req, res) => {
-  console.log(req.url);
+  console.log(req.url); // eslint-disable-line no-console
 
   const context = {};
   const body = ReactDOMServer.renderToString(
@@ -37,5 +49,5 @@ server.use((req, res) => {
   res.end();
 });
 
-console.log(`listening on ${port}`);
+console.log(`listening on ${port}`); // eslint-disable-line no-console
 server.listen(port);
