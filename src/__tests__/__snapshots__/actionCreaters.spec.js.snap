@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`actionCreators addApiData 1`] = `
+Object {
+  "payload": Object {
+    "description": "Two cousins, with different views on art versus commerce, on their way up through the Atlanta rap scene; \\"Earnest 'Earn' Marks,\\" an ambitious college drop-out and his estranged cousin, who suddenly becomes a star.",
+    "imdbID": "tt4288182",
+    "poster": "a.jpg",
+    "rating": "8.6",
+    "title": "Atlanta",
+    "trailer": "MpEdJ-mmTlY",
+    "year": "2008–2013",
+  },
+  "type": "ADD_API_DATA",
+}
+`;
+
+exports[`actionCreators setSearchTerm 1`] = `
+Object {
+  "payload": "homeland",
+  "type": "SET_SEARCH_TERM",
+}
+`;
