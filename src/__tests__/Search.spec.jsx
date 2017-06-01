@@ -1,10 +1,17 @@
 // @flow
 
 import React from 'react';
-import { shallow } from 'enzyme';
+import { MemoryRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+
+import { shallow, render } from 'enzyme';
+
+import { setSearchTerm } from '../actionCreaters';
+import store from '../store';
+
 import preload from '../../data.json';
 
-import { UnwrappedSearch } from '../Search';
+import Search, { UnwrappedSearch } from '../Search';
 import ShowCard from '../ShowCard';
 
 describe('Search', () => {
@@ -29,4 +36,20 @@ describe('Search', () => {
 
     expect(component.find(ShowCard).length).toEqual(showCount);
   });
+
+  it('should render correct amount of shows based on search term - Redux', () => {
+    const searchTerm = 'black';
+    store.dispatch(setSearchTerm(searchTerm));
+    component = render(
+      <Provider store={store}>
+        <MemoryRouter>
+          <Search shows={preload.shows} />
+        </MemoryRouter>
+      </Provider>
+    );
+    const showCount = 2;
+
+    expect(component.find('.show-card').length).toEqual(showCount);
+  });
 });
+
