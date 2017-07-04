@@ -37,9 +37,15 @@ class ShowCard extends Component {
           src={`/public/img/posters/${this.props.poster}`}
         />
         <div>
-          <h3>{this.props.title}</h3>
-          <h4>({this.props.year})</h4>
-          <p>{this.props.description}</p>
+          <h3>
+            {this.props.title}
+          </h3>
+          <h4>
+            ({this.props.year})
+          </h4>
+          <p>
+            {this.props.description}
+          </p>
         </div>
       </Wrapper>
     );

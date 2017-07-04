@@ -9,7 +9,7 @@ import ShowCard from './ShowCard';
 const Search = (props: {
   searchTerm: string, // eslint-disable-line react/no-unused-prop-types
   shows: Array<Show>
-}) => (
+}) =>
   <div className="search">
     <Header showSearch />
     <div>
@@ -21,8 +21,7 @@ const Search = (props: {
         )
         .map(show => <ShowCard key={show.imdbID} {...show} />)}
     </div>
-  </div>
-);
+  </div>;
 
 const mapStateToProps = state => ({ searchTerm: state.searchTerm });
 

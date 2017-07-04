@@ -24,9 +24,7 @@ const Header = (props: {
   } else {
     utilSpace = (
       <h2>
-        <Link to="/search">
-          Back
-        </Link>
+        <Link to="/search">Back</Link>
       </h2>
     );
   }

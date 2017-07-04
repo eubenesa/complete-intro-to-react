@@ -30,7 +30,11 @@ class Details extends Component {
 
     let ratingComponent;
     if (this.props.rating) {
-      ratingComponent = <h3>{this.props.rating}</h3>;
+      ratingComponent = (
+        <h3>
+          {this.props.rating}
+        </h3>
+      );
     } else {
       ratingComponent = <Spinner />;
     }
@@ -39,14 +43,20 @@ class Details extends Component {
       <div className="details">
         <Header />
         <section>
-          <h1>{title}</h1>
-          <h2>({year})</h2>
+          <h1>
+            {title}
+          </h1>
+          <h2>
+            ({year})
+          </h2>
           {ratingComponent}
           <img
             alt={`Poster for ${title}`}
             src={`/public/img/posters/${poster}`}
           />
-          <p>{description}</p>
+          <p>
+            {description}
+          </p>
         </section>
         <div>
           <iframe

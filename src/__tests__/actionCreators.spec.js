@@ -10,7 +10,8 @@ describe('actionCreators', () => {
   });
 
   const atlanta = {
-    description: 'Two cousins, with different views on art versus commerce, on their way up through the Atlanta rap scene; "Earnest \'Earn\' Marks," an ambitious college drop-out and his estranged cousin, who suddenly becomes a star.',
+    description:
+      'Two cousins, with different views on art versus commerce, on their way up through the Atlanta rap scene; "Earnest \'Earn\' Marks," an ambitious college drop-out and his estranged cousin, who suddenly becomes a star.',
     imdbID: 'tt4288182',
     poster: 'a.jpg',
     title: 'Atlanta',

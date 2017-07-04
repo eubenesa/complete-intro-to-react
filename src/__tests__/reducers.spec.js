@@ -18,7 +18,8 @@ describe('reducers', () => {
         type: 'ADD_API_DATA',
         payload: {
           rating: '4.0',
-          description: 'Two cousins, with different views on art versus commerce, on their way up through the Atlanta rap scene; "Earnest \'Earn\' Marks," an ambitious college drop-out and his estranged cousin, who suddenly becomes a star.',
+          description:
+            'Two cousins, with different views on art versus commerce, on their way up through the Atlanta rap scene; "Earnest \'Earn\' Marks," an ambitious college drop-out and his estranged cousin, who suddenly becomes a star.',
           imdbID: 'tt4288182',
           poster: 'a.jpg',
           title: 'Atlanta',
@@ -32,7 +33,8 @@ describe('reducers', () => {
       apiData: {
         tt4288182: {
           rating: '4.0',
-          description: 'Two cousins, with different views on art versus commerce, on their way up through the Atlanta rap scene; "Earnest \'Earn\' Marks," an ambitious college drop-out and his estranged cousin, who suddenly becomes a star.',
+          description:
+            'Two cousins, with different views on art versus commerce, on their way up through the Atlanta rap scene; "Earnest \'Earn\' Marks," an ambitious college drop-out and his estranged cousin, who suddenly becomes a star.',
           imdbID: 'tt4288182',
           poster: 'a.jpg',
           title: 'Atlanta',
@@ -50,7 +52,8 @@ describe('reducers', () => {
         apiData: {
           tt4270492: {
             rating: '5.7',
-            description: 'U.S. Attorney Chuck Rhoades goes after hedge fund king, Bobby "Axe" Axelrod in a battle between two powerful New York figures.',
+            description:
+              'U.S. Attorney Chuck Rhoades goes after hedge fund king, Bobby "Axe" Axelrod in a battle between two powerful New York figures.',
             imdbID: 'tt4270492',
             poster: 'b.jpg',
             title: 'Billions',
@@ -63,7 +66,8 @@ describe('reducers', () => {
         type: 'ADD_API_DATA',
         payload: {
           rating: '7.0',
-          description: 'A television anthology series that shows the dark side of life and technology.',
+          description:
+            'A television anthology series that shows the dark side of life and technology.',
           imdbID: 'tt2085059',
           poster: 'bm.jpg',
           title: 'Black Mirror',
@@ -77,7 +81,8 @@ describe('reducers', () => {
       apiData: {
         tt4270492: {
           rating: '5.7',
-          description: 'U.S. Attorney Chuck Rhoades goes after hedge fund king, Bobby "Axe" Axelrod in a battle between two powerful New York figures.',
+          description:
+            'U.S. Attorney Chuck Rhoades goes after hedge fund king, Bobby "Axe" Axelrod in a battle between two powerful New York figures.',
           imdbID: 'tt4270492',
           poster: 'b.jpg',
           title: 'Billions',
@@ -86,7 +91,8 @@ describe('reducers', () => {
         },
         tt2085059: {
           rating: '7.0',
-          description: 'A television anthology series that shows the dark side of life and technology.',
+          description:
+            'A television anthology series that shows the dark side of life and technology.',
           imdbID: 'tt2085059',
           poster: 'bm.jpg',
           title: 'Black Mirror',

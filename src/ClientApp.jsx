@@ -8,7 +8,9 @@ import App from './App';
 
 const renderApp = () => {
   render(
-    <BrowserRouter><App /></BrowserRouter>,
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>,
     document.getElementById('app')
   );
 };

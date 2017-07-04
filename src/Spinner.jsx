@@ -12,12 +12,9 @@ const spin = keyframes`
   }
 `;
 
-const Image = styled.img`
-  animation: ${spin} 4s infinite linear;
-`;
+const Image = styled.img`animation: ${spin} 4s infinite linear;`;
 
-const Spinner = () => (
-  <Image alt="loading indicator" src="/public/img/loading.png" />
-);
+const Spinner = () =>
+  <Image alt="loading indicator" src="/public/img/loading.png" />;
 
 export default Spinner;

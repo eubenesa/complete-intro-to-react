@@ -13,29 +13,27 @@ import AsyncRoute from './AsyncRoute';
 
 const FourOFour = () => <h1>404</h1>;
 
-const App = () => (
+const App = () =>
   <Provider store={store}>
     <div className="app">
       <Switch>
         <Route
           exact
           path="/"
-          component={props => (
-            <AsyncRoute props={props} loadingPromise={import('./Landing')} />
-          )}
+          component={props =>
+            <AsyncRoute props={props} loadingPromise={import('./Landing')} />}
         />
         <Route
           path="/search"
-          component={props => (
+          component={props =>
             <AsyncRoute
               props={Object.assign({ shows: preload.shows }, props)}
               loadingPromise={import('./Search')}
-            />
-          )}
+            />}
         />
         <Route
           path="/details/:id"
-          component={(props: { match: Match }) => (
+          component={(props: { match: Match }) =>
             <AsyncRoute
               props={Object.assign(
                 {
@@ -47,13 +45,11 @@ const App = () => (
                 props
               )}
               loadingPromise={import('./Details')}
-            />
-          )}
+            />}
         />
         <Route component={FourOFour} />
       </Switch>
     </div>
-  </Provider>
-);
+  </Provider>;
 
 export default App;

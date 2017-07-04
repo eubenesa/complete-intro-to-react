@@ -52,4 +52,3 @@ describe('Search', () => {
     expect(component.find('.show-card').length).toEqual(showCount);
   });
 });
-
