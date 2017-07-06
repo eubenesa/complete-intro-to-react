@@ -1,5 +1,5 @@
-// flow-typed signature: 0a6a6906c197a7b95b251a16f7064bee
-// flow-typed version: f471f20d31/express_v4.x.x/flow_>=v0.32.x
+// flow-typed signature: 78eec0fbe090057bc3c26451d513b4ce
+// flow-typed version: e7aa3314da/express_v4.x.x/flow_>=v0.32.x
 
 import type { Server } from 'http';
 
@@ -136,7 +136,7 @@ declare class express$Route {
 declare class express$Router extends express$Route {
   constructor(options?: express$RouterOptions): void;
   route(path: string): express$Route;
-  static (): express$Router;
+  static (options?: express$RouterOptions): express$Router;
   use(middleware: express$Middleware): this;
   use(...middleware: Array<express$Middleware>): this;
   use(path: string|RegExp|string[], ...middleware: Array<express$Middleware>): this;
@@ -173,13 +173,13 @@ declare class express$Application extends express$Router mixins events$EventEmit
 declare module 'express' {
   declare function serveStatic(root: string, options?: Object): express$Middleware;
 
-  declare type RouterOptions = express$RouterOptions;
-  declare type CookieOptions = express$CookieOptions;
-  declare type Middleware = express$Middleware;
-  declare type NextFunction = express$NextFunction;
-  declare type $Response = express$Response;
-  declare type $Request = express$Request;
-  declare type $Application = express$Application;
+  declare export type RouterOptions = express$RouterOptions;
+  declare export type CookieOptions = express$CookieOptions;
+  declare export type Middleware = express$Middleware;
+  declare export type NextFunction = express$NextFunction;
+  declare export type $Response = express$Response;
+  declare export type $Request = express$Request;
+  declare export type $Application = express$Application;
 
   declare module.exports: {
     (): express$Application, // If you try to call like a function, it will use this signature

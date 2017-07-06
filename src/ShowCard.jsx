@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-// $FlowFixMe
 const Wrapper = styled(Link)`
   width: 32%;
   border: 2px solid #333;
